@@ -12,7 +12,8 @@
                                 @csrf
                                 <input type="hidden" name="product_id" placeholder="" value="{{ $item->id }}">
                                 <div class="card p-2">
-                                    <h4> ชื่อสินค้า {{ $item->name }}</h4>
+                                    <img class="w-100" src="{{ asset('storage/'. $item->image) }}" alt="">
+                                    <h4> ชื่อสินค้า {{ $item->name }}</h4> 
                                     <p>ราคา {{ $item->price }}</p>
                                     <button class="btn btn-secondary" type="submit">ซื้อ</button>
                                 </div>
